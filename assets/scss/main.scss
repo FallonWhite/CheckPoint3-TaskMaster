@@ -3,6 +3,7 @@
 @import "./_overrides.scss";
 @import "./custom.scss";
 @import "./loaders.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 body {
   display: flex;
@@ -15,16 +16,9 @@ main {
   flex-grow: 1;
 }
 
-select option[value="1"] {
-  background-color: primary;  
-}
-
-select option[value="2"] {
-  background-color: #0f0;   
-}
-
-select option[value="3"] {
-  background-color: #00f;  
+.taskmaster-font {
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: -2px 2px $secondary
 }
 
 
