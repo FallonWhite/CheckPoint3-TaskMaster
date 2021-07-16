@@ -11,21 +11,50 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>CheckPoint3-TaskMaster</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-dark navbar-expand bg-light text-dark">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
                 <span class="ml-2">CheckPoint3-TaskMaster</span>
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
             </a>
         </nav>
     </header>
+
     <main class="container">
-        <div id="app"></div>
+        <div class="row">
+            <div class="col-md-8 mt-4">
+                <form onsubmit="app.listsController.createList()" class="text-light d-flex justify-content-between">
+                    <div class="form-group">
+                        <label for="name">Name Your List:</label>
+                        <input type="text" name="name" id="name" class="form-control text-light" placeholder="List Name"
+                            required minlength="3" , maxlength="15">
+                    </div>
+                    <div class="form-group">
+                        <label for="color" class="form-label">Color:</label>
+                        <select class="form-select" id="color">
+                            <option value="1" style="background: darkmagenta">Purple</option>
+                            <option value="2" style="background: deeppink">Pink</option>
+                            <option value="3" style="background: deepskyblue">SkyBlue</option>
+                            <option value="4" style="background: lime">Lime</option>
+                            <option value="5" style="background: blueviolet">Violet</option>
+                            <option value="6" style="background: slategrey">Grey</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-secondary btn-outline-primary">Create</button>
+                    </div>
+                </form>
+
+
+
+
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
