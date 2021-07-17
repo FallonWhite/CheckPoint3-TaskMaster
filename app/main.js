@@ -32,15 +32,3 @@ export default class HousesController {
     form.reset()
   }
 }
-© 2021 GitHub, Inc.
-  Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
