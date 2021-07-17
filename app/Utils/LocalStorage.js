@@ -13,7 +13,7 @@ export function loadState() {
   let data = JSON.parse(localStorage.getItem('Friday'))
   console.log(data)
   if (data != null) {
-    ProxyState.lists = data.lists.map(list => new List(l))
+    ProxyState.lists = data.lists.map(list => new List(list))
 
   }
 
