@@ -10,6 +10,6 @@ export default class Task {
 
   get Template() {
     return `<li>${this.name} 
-    <span class="action" onclick="app.listsController.removeTask('${this.id}')">x</span></li>`
+    <span class="action" onclick="app.listsController.removeTask('${this.id}')" >x</span></li>`
   }
 }
