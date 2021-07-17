@@ -16,7 +16,7 @@ export function loadState() {
   console.log(data)
   if (data != null) {
     ProxyState.lists = data.lists.map(list => new List(list))
-    ProxyState.taskss = data.taskss.map(task => new Task(task))
+    ProxyState.taskss = data.tasks.map(task => new Task(task))
   }
 
 }
