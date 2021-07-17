@@ -7,7 +7,6 @@ export default class List {
     return `
     <div class="col-md-3 col-sm-2 my-3">
       <div class="list bg-light shadow">
-          <img src="${this.imgUrl}" class="w-100" alt="${this.name} list image">
           <div class="p-3">
               <div class="text-center">
                   <p><b>${this.name}</b></p >
