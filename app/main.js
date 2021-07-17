@@ -1,34 +1,27 @@
 import { ProxyState } from "../AppState.js"
-import { housesService } from '../Services/HousesService.js'
+import { listsService } from '../Services/ListsService.js'
 
 function _draw() {
   let template = ''
-  ProxyState.houses.forEach(house => {
-    template += house.Template
+  ProxyState.lists.forEach(list => {
+    template += list.Template
   })
-  document.getElementById('houses').innerHTML = template
+  document.getElementById('lists').innerHTML = template
 }
 
-export default class HousesController {
+export default class ListsController {
   constructor() {
-    ProxyState.on('houses', _draw)
-    ProxyState.on('houses', () => { console.log('new house') })
+    ProxyState.on('lists', _draw)
+    ProxyState.on('lists', () => { console.log('new list') })
     _draw()
   }
-  createHouse() {
+  createList() {
     event.preventDefault()
     let form = event.target
-    let rawHouse = {
-      state: form.state.value,
-      city: form.city.value,
-      bedrooms: form.bedrooms.value,
-      bathrooms: form.bathrooms.value,
-      year: form.year.value,
-      price: form.price.value,
-      description: form.description.value,
-      imgUrl: form.imgUrl.value
+    let rawList = {
+      name: form.name.value,
     }
-    housesService.createHouse(rawHouse)
+    listsService.createList(rawList)
     form.reset()
   }
 }
