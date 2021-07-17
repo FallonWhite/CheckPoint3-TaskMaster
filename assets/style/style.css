@@ -4,3 +4,8 @@
   justify-content: center;
 list-style: none;
 }
+
+.taskmaster-font {
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 2px 2px secondary
+}

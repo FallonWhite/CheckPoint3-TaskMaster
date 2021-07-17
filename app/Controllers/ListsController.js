@@ -28,13 +28,3 @@ export default class ListsController {
 }
 
 
-
-
-
-export default class ListsController {
-  constructor() {
-    ProxyState.on("lists", _draw);
-    _draw()
-  }
-
-}
