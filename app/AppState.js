@@ -9,16 +9,17 @@ class AppState extends EventEmitter {
     new List({
       name: 'Friday',
     })
-export const ProxyState = new Proxy(new AppState(), {
-      get(target, prop) {
-        isValidProp(target, prop)
-        return target[prop]
-      },
-      set(target, prop, value) {
-        isValidProp(target, prop)
-        target[prop] = value
-        target.emit(prop, value)
-        return true
-      }
-    })
+  ]
 }
+export const ProxyState = new Proxy(new AppState(), {
+  get(target, prop) {
+    isValidProp(target, prop)
+    return target[prop]
+  },
+  set(target, prop, value) {
+    isValidProp(target, prop)
+    target[prop] = value
+    target.emit(prop, value)
+    return true
+  }
+})
