@@ -13,9 +13,9 @@ function _draw() {
 export default class ListsController {
   constructor() {
     ProxyState.on('lists', _draw)
-    ProxyState.on('tasks', _draw)
+
     ProxyState.on('lists', saveState)
-    ProxyState.on('tasks', saveState)
+
 
     loadState()
   }
@@ -37,18 +37,4 @@ export default class ListsController {
     listsService.destroy(id)
   }
 
-  addTask(listId) {
-    event.preventDefault()
-    let form = event.target
-    let rawTask = {
-      listId,
-      name: form.task.value
-    }
-    listsService.addTask(rawTask)
-    form.reset()
-  }
-
-  removeTask(id) {
-    listsService.removeTask(id)
-  }
 }
