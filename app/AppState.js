@@ -4,11 +4,11 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   /** @type {List[]} */
+
   lists = [
     new List({
       name: 'Friday',
-    }),
-  
+    })
 export const ProxyState = new Proxy(new AppState(), {
       get(target, prop) {
         isValidProp(target, prop)
