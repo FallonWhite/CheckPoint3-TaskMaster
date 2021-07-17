@@ -21,4 +21,10 @@ main {
   text-shadow: -2px 2px $secondary
 }
 
+.action {
+  text-shadow: 2px 2px 4px black;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
 
