@@ -1,30 +1,54 @@
-import { ProxyState } from "../AppState.js";
-import { listsService } from "../Services/ListsService.js";
-
+import { ProxyState } from "../AppState.js"
+import { listsService } from "../Services/ListsService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 function _draw() {
   let template = ''
-  ProxyState.lists.forEach(list => {
-    template += list.Template
-  })
+  let lists = ProxyState.lists
+  lists.forEach(list => template += list.Template)
   document.getElementById('lists').innerHTML = template
 }
+
 
 export default class ListsController {
   constructor() {
     ProxyState.on('lists', _draw)
-    ProxyState.on('lists', () => { console.log('new list') })
-    _draw()
+    ProxyState.on('tasks', _draw)
+    ProxyState.on('lists', saveState)
+    ProxyState.on('tasks', saveState)
+
+    loadState()
   }
+
+
   createList() {
+
     event.preventDefault()
     let form = event.target
     let rawList = {
-      name: form.name.value
+      name: form.name.value,
     }
     listsService.createList(rawList)
     form.reset()
   }
+
+
+  destroy(id) {
+    listsService.destroy(id)
+  }
+
+  addTask(listId) {
+    event.preventDefault()
+    let form = event.target
+    let rawTask = {
+      listId,
+      name: form.task.value
+    }
+    listsService.addTask(rawTask)
+    form.reset()
+  }
+
+  removeTask(id) {
+    listsService.removeTask(id)
+  }
 }
-
-
