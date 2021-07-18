@@ -1,12 +1,15 @@
 import { ProxyState } from "../AppState.js"
 import { listsService } from "../Services/ListsService.js"
 import { loadState, saveState } from "../Utils/LocalStorage.js"
-import { generateId } from "../Utils/GenerateId.js"
 
 function _draw() {
   let template = ''
   let lists = ProxyState.lists
+  let tasks = ProxyState.tasks
+
   lists.forEach(list => template += list.Template)
+  tasks.forEach(task => template += task.Template)
+
   document.getElementById('lists').innerHTML = template
 }
 
@@ -44,7 +47,7 @@ export default class ListsController {
     let form = event.target
     let rawTask = {
       listId,
-      name: form.task.value
+      name: form.task
     }
     listsService.addTask(rawTask)
     form.reset()
