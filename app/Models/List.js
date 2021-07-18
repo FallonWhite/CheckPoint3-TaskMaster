@@ -15,7 +15,7 @@ export default class List {
   <div class="p-3">
       <div class="text-center">
           <h3 style="color: black; text-shadow: 1px 1px darkblue"><b>${this.name}</b></h3>
-          <button type="destroy" class="btn btn-primary btn-outline-info" onclick="app.listsController.destroy('${this.id}')">Delete List</button>
+          <button type="destroy" class="btn btn-primary btn-outline-info btn-sm" onclick="app.listsController.destroy('${this.id}')">Delete List</button>
       </div >
   </div >
 </div >
