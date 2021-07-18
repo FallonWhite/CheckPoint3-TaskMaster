@@ -11,9 +11,9 @@ export default class Task {
 
   get Template() {
     return `
-    <div class="text-align-left">
+    <div class="${this.listId}">
     <input type="checkbox" style="background-color: ${this.color}" class="mr-2">
     ${this.name} 
-    <span class="action" onclick="app.listsController.removeTask('${this.id}')" ></span>`
+    <span class="action" onclick="app.listsController.removeTask(${this.id}, ${this.name})" ><button type="destroy" class="btn btn-primary btn-outline-info btn-sm ml-3" onclick="app.listsController.destroy('${this.id}, ${this.name}')">Delete</button></span>`
   }
 }
