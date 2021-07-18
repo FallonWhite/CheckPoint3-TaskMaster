@@ -47,7 +47,7 @@ export default class ListsController {
     let form = event.target
     let rawTask = {
       listId,
-      name: form.task.value
+      name: form.addTask.value
     }
     listsService.addTask(rawTask)
     form.reset()
