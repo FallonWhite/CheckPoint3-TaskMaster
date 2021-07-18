@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js"
 import { listsService } from "../Services/ListsService.js"
 import { loadState, saveState } from "../Utils/LocalStorage.js"
+import { generateId } from "../Utils/GenerateId.js"
 
 function _draw() {
   let template = ''
