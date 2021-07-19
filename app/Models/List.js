@@ -15,10 +15,10 @@ export default class List {
   <div class="p-0 pt-3 pb-1">
       <div class="text-center">
           <h3 style="color: black; text-shadow: 1px 1px darkblue"><b>${this.name}</b></h3>
-          <button type="destroy" class="btn btn-primary btn-outline-info btn-sm mb-3 align-center" onclick="app.listsController.destroy('${this.id}')">Delete List</button>
+          <button type="destroy" class="btn btn-primary btn-outline-info btn-sm mb-3 align-center" onclick="app.listsController.destroy('${this.id}')" style="font-size: 16px;"><b>Delete List</b></button>
       </div >
       <div class="bg-white">
-      <p class="text-center pt-2 pl-2" style="color: black; text=shadow: 1px 1px darkblue background-color: white"><b>Tasks: ${this.MyTasks[1]}</b></p>
+      <p class="text-center pt-2 pl-2" style="color: black; text-shadow: 1px 1px darkblue background-color: white"><b>Tasks: ${this.MyTasks[1]}</b></p>
       <ul class="bg-white">
           ${this.MyTasks[0]}
       </ul>

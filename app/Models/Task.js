@@ -13,7 +13,7 @@ export default class Task {
   get Template() {
     return `
     <div class="${this.listId}">
-    <input type="checkbox" id="" style="background-color: ${this.color}" class="check() uncheck() mr-2" onclick="check() uncheck()">
+    <input type="checkbox" id="${this.listId}" style="background-color: ${this.color}" class="check() uncheck() mr-2">
     ${this.name} 
 <button type="destroy" class="btn btn-primary btn-outline-info btn-sm my-1 ml-5 pull-right" onclick="app.listsController.removeTask('${this.id}')">Delete</button></span>`
   }
