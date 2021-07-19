@@ -58,4 +58,7 @@ export default class ListsController {
       listsService.removeTask(id)
     }
   }
+  checkBox(id) {
+    listsService.updateTask(id);
+  }
 }

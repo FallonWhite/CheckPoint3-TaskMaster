@@ -17,6 +17,14 @@ class ListsService {
     ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
     ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != id)
   }
+
+  updateTask(id) {
+    if (localStorage.getItem(id) === 'checked') {
+      localStorage.setItem(id, '')
+    } else {
+      localStorage.setItem(id, "checked")
+    }
+  }
 }
 
 

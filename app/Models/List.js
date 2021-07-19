@@ -22,8 +22,8 @@ export default class List {
       <ul class="bg-white">
           ${this.MyTasks[0]}
       </ul>
-      <form onSubmit="app.listsController.addTask('${this.id}')" class="m-0 mb-2">
-      <div class="p-3 tasks my-0 mx-0 text-center" style="background-color: white">
+      <form onSubmit="app.listsController.addTask('${this.id}')" class="m-0 mb-2 mr-3">
+      <div class="p-3 tasks my-0 mx-0 mr-3 text-center" style="background-color: white">
       <input type="text" name="addTask" class="" placeholder="Add Task..." required minlength="3" , maxlength="50">
       <button style="background-color: ${this.color}"> + </button></form> 
       </div>
