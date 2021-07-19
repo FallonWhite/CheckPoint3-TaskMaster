@@ -29,13 +29,13 @@
         <div class="row">
             <div class="col-md-8 mt-4">
                 <form onsubmit="app.listsController.createList()" class="text-light d-flex justify-content-between">
-                    <div class="form-group">
-                        <label for="name">Name Your List:</label>
+                    <div class="form-group shadow-light">
+                        <label for="name"><b>Name Your List:</b></label>
                         <input type="text" name="name" id="name" class="form-control text-light" placeholder="List Name"
                             required minlength="3" , maxlength="15">
                     </div>
-                    <div class="form-group">
-                        <label for="color" class="form-label">Color:</label>
+                    <div class="form-group shadow-light">
+                        <label for="color" class="form-label"><b>List Color:</b></label>
                         <select class="form-select" id="color" onchange="this.style.backgroundColor = this.value">
                             <option value="darkmagenta" style="background: darkmagenta">Purple</option>
                             <option value="deeppink" style="background: deeppink">Pink</option>
@@ -46,7 +46,7 @@
                         </select>
                     </div>
                     <div class="mt-4">
-                        <button type="submit" class="btn btn-secondary btn-outline-primary">Create</button>
+                        <button type="submit" class="btn btn-secondary btn-outline-primary shadow-light">Create</button>
                     </div>
                 </form>
             </div>

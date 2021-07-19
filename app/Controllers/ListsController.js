@@ -5,10 +5,8 @@ import { loadState, saveState } from "../Utils/LocalStorage.js"
 function _draw() {
   let template = ''
   let lists = ProxyState.lists
-  let tasks = ProxyState.tasks
 
   lists.forEach(list => template += list.Template)
-  tasks.forEach(task => template += task.Template)
 
   document.getElementById('lists').innerHTML = template
 }
@@ -40,7 +38,9 @@ export default class ListsController {
 
 
   destroy(id) {
-    listsService.destroy(id)
+    if (window.confirm("Confirm Delete?")) {
+      listsService.destroy(id)
+    }
   }
   addTask(listId) {
     event.preventDefault()
@@ -54,6 +54,8 @@ export default class ListsController {
   }
 
   removeTask(id) {
-    listsService.removeTask(id)
+    if (window.confirm("Confirm Delete?")) {
+      listsService.removeTask(id)
+    }
   }
 }

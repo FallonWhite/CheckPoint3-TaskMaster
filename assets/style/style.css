@@ -5,7 +5,20 @@
 list-style: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Kaushan', script;
+  font-weight: bolder;
+  font-size: larger;
+}
+
 .taskmaster-font {
   font-family: 'Kaushan Script', cursive;
   text-shadow: 2px 2px secondary
+}
+
+.shadow-light {
+  box-shadow: 3px 3px 5px white;
 }
